@@ -1,0 +1,68 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "es6",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "dist",
+        "declaration": true,
+        "jsx": "react", //这句话决定了在react是否能用jsx
+        "noImplicitThis": false,
+        "removeComments": false,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "downlevelIteration": true,
+        "pretty": true,
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@services/*": [
+                "src/services/*"
+            ],
+            "@assets/*": [
+                "src/assets/*"
+            ],
+            "@models/*": [
+                "src/models/*"
+            ],
+            "@routes/*": [
+                "src/routes/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ],
+            "@data/*": [
+                "src/data/*"
+            ],
+        },
+        "plugins": [
+            {
+                "name": "typescript-styled-plugin",
+                "tags": [
+                    "styled",
+                    "css",
+                    "sty"
+                ],
+                "lint": {
+                    "vendorPrefix": "error",
+                    "zeroUnits": "ignore"
+                }
+            }
+        ]
+    },
+    "include": [
+        "src/*",
+        "src/**/*",
+        "mocker",
+        "assets"
+    ],
+    "exclude": [
+        "out",
+        "node_modules"
+    ]
+}
