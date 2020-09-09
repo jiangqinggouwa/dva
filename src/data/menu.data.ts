@@ -8,12 +8,12 @@ const menuData = [
     {
         "key": "dataBase",
         "title": "数据库",
-        "path": "/",
+        "path": "",
         "children": [
             {
                 "key": "field",
                 "title": "数据表",
-                "path": "/field"
+                "path": "/"
             },
             {
                 "key": "view",

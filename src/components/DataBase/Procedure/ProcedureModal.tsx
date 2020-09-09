@@ -5,39 +5,38 @@ import { connect } from 'dva';
 import { Dispatch } from 'redux';
 import * as data from '@data/formItem.data'
 
-
-interface FieldProps {
+interface PropsType {
     visible: boolean;
     dispatch: Dispatch;
+    title: string;
 }
 
-class FieldModal extends Component <FieldProps>{
-    constructor(props: FieldProps) {
+class ProcedureModal extends Component <PropsType>{
+    constructor(props: PropsType) {
         super(props)
     };
     
-    setVisible = (value: boolean) => {
+    setVisible = (visible:boolean,title:string) => {
+        console.log('11111')
+
         this.props.dispatch({
-            type: "field/setVisible",
-            paylpad: value
+            type: "procedure/setVisible",
+            paylpad: { visible:{visible}, title:{title}}
         })
     }
     render() {
-        const { visible } = this.props
+        console.log(this.props.dispatch)
+        const { visible,title,dispatch } = this.props
         return (
                 <ModalUi 
-                    title="新增"
+                    title={title}
                     show={ visible }
-                    handleCancel={() => this.setVisible(false) }  
-                    handleOk={ ()=>this.setVisible(false) }
+                    handleCancel={ ()=>this.setVisible(false,'') } 
+                    handleOk={ ()=>this.setVisible(false,'') }
                 >
                     <FormItemUi ItemData={data.fieldItemData} row={24} col={24}/>
                 </ModalUi>
         )
     }
 };
-export default connect(
-    ({field}:any)=>({
-        visible: field.visible
-    })    
-)(FieldModal)
+export default connect()(ProcedureModal)

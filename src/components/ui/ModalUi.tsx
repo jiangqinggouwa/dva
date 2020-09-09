@@ -4,6 +4,7 @@ import { Modal, Button } from 'antd';
 interface ModalProps {
     show: boolean;
     children: any;
+    title: string;
     handleCancel: ()=>void;
     handleOk: ()=>void
 }
@@ -13,12 +14,12 @@ class ModalUi extends Component<ModalProps>{
     }
 
     render() {
-        const { show, children, handleCancel, handleOk } = this.props
+        const { show, children, handleCancel, handleOk, title } = this.props
         return (
             <>
                 <Modal
                     visible={ show }
-                    title="Title"
+                    title={title}
                     onCancel={handleCancel}
                     footer={[
                         <Button key="back" onClick={ handleCancel }>取消</Button>,

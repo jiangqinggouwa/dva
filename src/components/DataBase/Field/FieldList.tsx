@@ -33,7 +33,7 @@ const columns = (that) => [
    {
         title: '操作',
         dataIndex: 'option',
-        render() {
+        render(that) {
             return (
                 <span>
                     <Link to="/item" onClick={()=>that.props.dispatch({type: "menu/change", payload: {path:"item", title: "编辑"}})}>编辑</Link>

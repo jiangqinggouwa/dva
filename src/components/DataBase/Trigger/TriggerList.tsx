@@ -1,6 +1,5 @@
 import React from 'react';
 import {Table, Popconfirm, Button} from 'antd';
-import {PAGE_SIZE} from '@utils/constants';
 import * as Antd from '@assets/styled.antd';
 
 function Trigger() {
@@ -90,7 +89,7 @@ function Trigger() {
         total: tableData.length,
         showSizeChanger: true,
         onShowSizeChange(current, pageSize) {
-            console.log('Current: ', current, '; PageSize: ', PAGE_SIZE)
+            console.log('Current: ', current, '; PageSize: ')
         },
         onChange(current) {
             console.log('Current: ', current)

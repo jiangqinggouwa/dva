@@ -16,9 +16,14 @@ class FieldItem extends Component<any>{
             type: 'users/create',
             payload: values
         })
+        console.log(this.props.dispatch({
+            type: 'users/create',
+            payload: values
+        }))
     };
 
     render() {
+        console.log(this.props)
         const { dispatch } = this.props
         return (
             <div>
@@ -40,7 +45,7 @@ class FieldItem extends Component<any>{
                             新增
                         </Button>
                         <FieldModal/>
-                        <EditableTable />
+                        <EditableTable dispatch={dispatch}/>
                     </div>
                 </Card>
             </div>
