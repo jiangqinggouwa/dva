@@ -1,4 +1,4 @@
-import fetch from 'dva/fetch';
+import { fetch } from 'dva';
 
 function parseJSON(response) {
   return response.json();

@@ -56,7 +56,8 @@ module.exports = {
         historyApiFallback: true,
         proxy: {
             '/api': {
-              target: ' http://192.168.1.128:8080/AgTable',
+            //   target: ' http://192.168.1.128:8080/AgTable',
+              target: 'http://public-api-v1.aspirantzhang.com/',
               pathRewrite: { '^/api': '' },//it is import
               secure: false,
               changeOrigin: true

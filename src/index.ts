@@ -13,15 +13,6 @@ const app = dva({
 });
 
 
-// app.use({
-//     extraEnhancers: [
-//         persistEnhancer({
-//             key: 'model',
-//             storage
-//         })
-//     ],
-// });
-
 app.model(siderModel as any);
 app.model(fieldModel as any);
 app.model(procedureModel as any);

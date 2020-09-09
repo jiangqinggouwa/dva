@@ -7,6 +7,7 @@
         "sourceMap": true,
         "outDir": "dist",
         "declaration": true,
+        "strictFunctionTypes": false,
         "jsx": "react", //这句话决定了在react是否能用jsx
         "noImplicitThis": false,
         "removeComments": false,
